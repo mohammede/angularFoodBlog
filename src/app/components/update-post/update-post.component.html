@@ -1,0 +1,30 @@
+<div *ngIf="isUpdates == 'true'" class="alert alert-success mt-4" role="alert">
+  The post Has been added successfully
+  </div>
+<!-- Default form contact -->
+<form class="text-center border border-light p-5 mt-5" [formGroup]="updatePost" (ngSubmit)="onSubmit(updatePost)">
+
+  <p class="h4 mb-4">Update Post</p>
+
+  <!-- Name -->
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="title" formControlName="title">
+
+  <!-- Author -->
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="author" formControlName="author">
+
+  <!-- Image url -->
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Image Url" formControlName="image">
+
+
+  <!-- Message -->
+  <div class="form-group">
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="6" placeholder="Content" formControlName="content"></textarea>
+  </div>
+
+
+
+  <!-- Send button -->
+  <button mdbBtn color="info" block="true" type="submit">Send</button>
+
+</form>
+<!-- Default form contact -->

@@ -1,0 +1,29 @@
+<div *ngIf="mailIsSent == 'true'" class="alert alert-success mt-4" role="alert">
+your mail was sent seccuessfuly  </div>
+<!-- Default form contact -->
+<form class="text-center border border-light p-5 mt-5" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+
+  <p class="h4 mb-4">Contact Us</p>
+
+  <!-- Name -->
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Your Name" formControlName="name">
+
+  <!-- Author -->
+  <input type="email" id="defaultContactFormName" class="form-control mb-4" placeholder="Your Email" formControlName="email">
+
+  <!-- Image url -->
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Subject" formControlName="subject">
+
+
+  <!-- Message -->
+  <div class="form-group">
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="6" placeholder="Content" formControlName="content"></textarea>
+  </div>
+
+
+
+  <!-- Send button -->
+  <button mdbBtn color="info" block="true" type="submit">Send</button>
+
+</form>
+<!-- Default form contact -->
